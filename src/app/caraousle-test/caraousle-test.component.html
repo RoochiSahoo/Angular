@@ -1,0 +1,40 @@
+
+<div class="container-fluid" style="width: fit-content;">
+<ngb-carousel *ngIf="images">
+<ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+        <!--<img [src]="images[0]" alt="Random First Slide">-->
+        <img src="../../assets/images/b9gro-3ndzf.jpg" alt="Random First Slide">
+    </div>
+    <div class="carousel-caption">
+        <h3>first slide label</h3>
+        <p>this is first image</p>
+
+    </div>
+</ng-template>
+<ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random First Slide">
+        </div>
+        <div class="carousel-caption">
+            <h3>first slide label</h3>
+            <p>this is first image</p>
+    
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="images[2]" alt="Random First Slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>first slide label</h3>
+                <p>this is first image</p>
+        
+            </div>
+        </ng-template>
+</ngb-carousel>
+
+
+
+
+</div>

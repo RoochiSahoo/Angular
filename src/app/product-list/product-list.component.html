@@ -1,21 +1,41 @@
 <p>product-list works!</p>
-<table>
+<div class="container">
+<table class="table">
+    <thead class="thead-dark">
+       
+           <tr>
+            <th>productId</th>
+            <th>name</th>
+            <th>price</th>
+           <th>brand</th>
+            </tr>
+    </thead>
     
-<tr *ngFor="let p of products"(click)="onSelect(p)">
-    <td>{{p.id}}</td>
+<tbody>
+    
+<tr class="table-primary" *ngFor="let p of products"(click)="onSelect(p)">
+    <td>{{p.productId}}</td>
     <td>{{p.name}}</td>
     <td>{{p.brand}}</td>
     <td>{{p.price}}</td>
 
 
 </tr>
-
-
-
-
-
+</tbody>
 </table>
+</div>
+
 <div *ngIf="selectedProduct">
     <p>{{selectedProduct.name}}</p>
    <p><input [(ngModel)]="selectedProduct.price"></p>
 </div>
+<div *ngFor="let p of products">
+
+    <h2><a [title]="p.name+'details'">{{p.name}}</a></h2>
+    <h3>{{p.brand}}</h3>
+    <button class="btn btn-info" (click)="share()">like subscribe and share</button>
+    <app-product-notifi [parentData]="p" (notify)="notifyUser($event)"></app-product-notifi><!--property binding $EVENT represent object-->
+
+
+</div>
+<p>{{childData}}</p>

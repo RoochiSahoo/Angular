@@ -1,0 +1,6 @@
+[
+    {"productId":5001,"name":"Refrigerator","brand":"LG","price":2109.00},
+    {"productId":5002,"name":"Mobile","brand":"Samsung","price":8109.00},
+    {"productId":5003,"name":"LED TV","brand":"Sony","price":9909.00}
+
+]
